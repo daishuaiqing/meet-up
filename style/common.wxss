@@ -1,0 +1,107 @@
+/* text color */
+
+.text-black {
+  color: #101010;
+}
+
+.text-gray {
+  color: #848484;
+}
+
+.text-dark {
+  color: #333;
+}
+
+.text-red {
+  color: #bc3e49;
+}
+
+.text-bright {
+  color: #d74341;
+}
+
+.text-orange {
+  color: #ec9f4b;
+}
+
+.text-barilla {
+  color: #c8c8c8;
+}
+
+/* 背景色 */
+
+.bg-red {
+  background-color: #de433e;
+}
+
+.bg-pink {
+  background-color: #faede7;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-grey {
+  background-color: #e5e5e7;
+}
+
+/* 字体大小 */
+
+.font-xl {
+  font-size: 36rpx;
+}
+
+.font-lg {
+  font-size: 32rpx;
+}
+
+.font-md {
+  font-size: 28rpx;
+}
+
+.font-sm {
+  font-size: 26rpx;
+}
+
+.font-xs {
+  font-size: 22rpx;
+}
+
+.font-xxs {
+  font-size: 20rpx;
+}
+
+/* 间距 */
+
+.padding {
+  padding: 30rpx 30rpx;
+}
+
+/* 边距 */
+
+.margin {
+  margin: 30rpx 30rpx;
+}
+
+/* flex */
+
+.flex {
+  display: flex;
+}
+
+.flex-v-center {
+  align-items: center;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-h-center {
+  justify-content: center;
+}
