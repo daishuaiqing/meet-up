@@ -1,1 +1,10 @@
 /**index.wxss**/
+.cat-style{
+  padding: 24rpx 28rpx;
+  color: #333333;
+}
+.cat-style-active{
+  padding: 24rpx 26rpx;
+  color: #BC3E49;
+  border-bottom: 2rpx solid #BC3E49;
+}

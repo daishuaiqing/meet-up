@@ -84,6 +84,10 @@
   margin: 30rpx 30rpx;
 }
 
+.margin-top{
+  margin-top: 30rpx;
+}
+
 /* flex */
 
 .flex {
@@ -104,4 +108,47 @@
 
 .flex-h-center {
   justify-content: center;
+}
+
+/* customer button */
+.bt-submit{
+  height: 90rpx;
+  width: 670rpx;
+  border-radius: 8rpx;
+  background-color: #de433e;
+  color: #FFFFFF;
+  font-size: 32rpx;
+  line-height: 90rpx;
+  text-align: center;
+  margin-left: 40rpx;
+}
+
+.bt-sm{
+  display: inline-block;
+  border-radius: 20rpx;
+  padding: 4rpx 24rpx;
+  font-size: 22rpx;
+  border: 1rpx solid #01C1A7;
+  color: #01C1A7;
+}
+
+.bt-md{
+  display: inline-block;
+  border-radius: 45rpx;
+  padding: 12rpx 48rpx;
+  font-size: 32rpx;
+  border: 1rpx solid #01C1A7;
+  color: #01C1A7;
+}
+
+.avatar-lg{
+  width: 120rpx;
+  height: 120rpx;
+  background-color: #999999;
+}
+
+.avatar-sm{
+  width: 48rpx;
+  height: 48rpx;
+  background-color: #999999;
 }

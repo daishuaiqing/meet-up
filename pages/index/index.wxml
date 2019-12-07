@@ -1,1 +1,7 @@
 <!--index.wxml-->
+<view class="flex">
+  <view class="font-md cat-style-active">演唱会</view>
+  <view class="font-md cat-style">话剧歌剧</view>
+  <view class="font-md cat-style">休闲展览</view>
+  <view class="font-md cat-style">戏曲艺术</view>
+</view>
