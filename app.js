@@ -1,6 +1,10 @@
 //app.js
+var cn = require("utils/cn")
+var en = require("utils/en")
 App({
   onLaunch: function () {
+    //判断当前系统的语言，选择显示的语言
+    this.globalData.lang = cn
     // 展示本地存储能力
     // var logs = wx.getStorageSync('logs') || []
     // logs.unshift(Date.now())
@@ -34,6 +38,7 @@ App({
     // })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    lang: null
   }
 })

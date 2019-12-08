@@ -4,10 +4,18 @@ const app = getApp()
 
 Page({
   data: {
+    catArr: [{ name: "演唱会" }, { name: "话剧歌剧" }, { name: "休闲展览" }, { name: "戏曲艺术" }],
+    currentIndex: 0,
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
+  },
+  changeCat: function(e){
+    let index = e.currentTarget.dataset.index
+    this.setData({
+      currentIndex: index
+    })
   },
   //事件处理函数
   bindViewTap: function() {
