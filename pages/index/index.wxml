@@ -1,8 +1,25 @@
 <!--index.wxml-->
-<view class="flex">
-  <!-- <view class="font-md cat-style-active">演唱会</view>
-  <view class="font-md cat-style">话剧歌剧</view>
-  <view class="font-md cat-style">休闲展览</view>
-  <view class="font-md cat-style">戏曲艺术</view> -->
-  <view wx:for="{{catArr}}" data-index="{{index}}" wx:key="{{index}}" bindtap="changeCat" class="font-md {{index==currentIndex?'cat-style-active':'cat-style'}}">{{item.name}}</view>
+<view class="header top-fixed bg-white">
+  <view class="flex">
+    <view wx:for="{{catArr}}" data-index="{{index}}" wx:key="{{index}}" bindtap="changeCat" class="font-md {{index==currentIndex?'cat-style-active':'cat-style'}}">{{item.name}}</view>
+  </view>
+</view>
+<view class="padding list">
+  <view class="flex item" wx:for="{{10}}">
+    <view class="item-img">
+      <image src="https://i.loli.net/2019/12/09/bneVCPyAM2oNhFT.png" />
+    </view>
+    <view class="item-content flex-between">
+      <view class="font-lg text-black item-title">周笔畅2019LUNAR巡回演唱会-上海站</view>
+      <view class="text-gray font-sm flex-column">
+        <text class="block">2019.12.14 19:30 周六</text>
+        <text class="block item-addr">上海 梅赛德斯奔驰中心</text>
+      </view>
+      <view class="flex">
+        <view class="text-orange font-xs book-tag">预定</view>
+        <view class="text-bright font-sm">580-1680元</view>
+      </view>
+    </view>
+    <view class="item-tag text-barilla font-xxs">自营</view>
+  </view>
 </view>

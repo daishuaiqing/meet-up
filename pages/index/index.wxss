@@ -1,4 +1,7 @@
 /**index.wxss**/
+.header{
+  width: 100%;
+}
 .cat-style{
   padding: 24rpx 28rpx;
   color: #333333;
@@ -6,5 +9,45 @@
 .cat-style-active{
   padding: 24rpx 26rpx;
   color: #BC3E49;
-  border-bottom: 2rpx solid #BC3E49;
+  border-bottom: 4rpx solid #BC3E49;
+}
+.list{
+  margin-top: 90rpx;
+}
+.item-img image{
+  width: 209rpx;
+  height: 283rpx;
+}
+.item-content{
+  width: 407rpx;
+  height: 283rpx;
+  margin-left: 21rpx;
+  display: flex;
+  flex-direction: column;
+}
+.item-tag{
+  height: 283rpx;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.item-title{
+  font-weight:bold;
+}
+.item-addr{
+  margin-top: 8rpx;
+}
+.book-tag{
+  width:58rpx;
+  height:38rpx;
+  background: #FAEDE7 ;
+  line-height: 38rpx;
+  text-align: center;
+  margin-right: 20rpx;
+}
+.item{
+  margin-bottom: 60rpx;
+}
+.top-fixed{
+  position: fixed;
+  top: 0;
 }

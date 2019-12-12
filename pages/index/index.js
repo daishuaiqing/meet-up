@@ -24,6 +24,10 @@ Page({
     })
   },
   onLoad: function () {
+    //加载语言内容
+    this.setData({
+      lang: app.globalData.lang
+    })
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

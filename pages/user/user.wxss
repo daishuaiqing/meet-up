@@ -1,0 +1,24 @@
+/* pages/user/user.wxss */
+.header{
+  width: 100%;
+  box-sizing: border-box;
+}
+.avatar image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  margin-left: 10rpx;
+}
+.username{
+  margin-left: 32rpx;
+}
+.item-icon image{
+  width: 40rpx;
+}
+.item{
+  padding: 40rpx 28rpx 40rpx 40rpx;
+}
+.right image{
+  width: 23rpx;
+  margin-left: 460rpx;
+}

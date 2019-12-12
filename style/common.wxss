@@ -28,6 +28,10 @@
   color: #c8c8c8;
 }
 
+.text-white{
+  color: #fff;
+}
+
 /* 背景色 */
 
 .bg-red {
@@ -88,6 +92,10 @@
   margin-top: 30rpx;
 }
 
+.margin-left{
+  margin-left: 30rpx;
+}
+
 /* flex */
 
 .flex {
@@ -108,6 +116,10 @@
 
 .flex-h-center {
   justify-content: center;
+}
+
+.block{
+  display: inline-block;
 }
 
 /* customer button */
