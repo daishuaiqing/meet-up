@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/user/user",
-    "page/auth/auth",
+    "pages/auth/auth",
+    "pages/act/index/index",
     "pages/logs/logs"
   ],
   "tabBar": {
@@ -15,7 +16,7 @@
         "pagePath": "pages/index/index"
       },
       {
-        "pagePath": "pages/logs/logs"
+        "pagePath": "pages/act/index/index"
       },
       {
         "pagePath": "pages/user/user"

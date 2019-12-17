@@ -1,4 +1,4 @@
-// page/auth/auth.js
+// pages/act/index/index.js
 Page({
 
   /**

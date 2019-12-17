@@ -1,0 +1,8 @@
+<!--pages/act/index/index.wxml-->
+<!-- <view>我创建的活动</view> -->
+
+<view class="flex flex-between">
+  <view>我参与的活动</view>
+  <view>all</view>
+</view>
+

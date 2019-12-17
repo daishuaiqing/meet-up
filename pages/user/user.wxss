@@ -14,6 +14,7 @@
 }
 .item-icon image{
   width: 40rpx;
+  height: 40rpx;
 }
 .item{
   padding: 40rpx 28rpx 40rpx 40rpx;
