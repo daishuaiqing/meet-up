@@ -4,11 +4,12 @@
     "pages/user/user",
     "pages/auth/auth",
     "pages/act/index/index",
+    "pages/act/detail/detail",
     "pages/logs/logs"
   ],
   "tabBar": {
     "color": "#2c2c2c",
-    "selectedColor": "#de433e",
+    "selectedColor": "#01c1a7",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [

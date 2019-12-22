@@ -1,25 +1,123 @@
 /* pages/user/user.wxss */
-.header{
+.user-header {
+  width: 750rpx;
+  padding: 32rpx 0 48rpx 40rpx;
+  box-sizing: border-box;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  background: #01c1a7;
+}
+
+.user-header .png {
+  width: 126rpx;
+  height: 126rpx;
+  border-radius: 50%;
+  margin-right: 32rpx;
+}
+
+.user-name {
+  flex: 1;
+}
+.loginbutton {
+  font-size: 36rpx;
+  color: white;
+}
+/* 用户功能列表 */
+
+.user-kol {
+  width: 750rpx;
+  padding-left: 40rpx;
+  padding-right: 28rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.user-common {
+  width: 750rpx;
+  padding-left: 40rpx;
+  padding-right: 28rpx;
+  box-sizing: border-box;
+  background: #fff;
+  margin-top: 12rpx;
+}
+
+.user-item {
   width: 100%;
+  height: 124rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   box-sizing: border-box;
 }
-.avatar image{
-  width: 120rpx;
-  height: 120rpx;
-  border-radius: 60rpx;
-  margin-left: 10rpx;
+
+.borbott {
+  border-bottom: 0.5rpx solid #e4e4e4;
+  position: relative;
 }
-.username{
-  margin-left: 32rpx;
+
+.icon-header {
+  margin-right: 30rpx;
 }
-.item-icon image{
+
+.icon-card {
   width: 40rpx;
   height: 40rpx;
 }
-.item{
-  padding: 40rpx 28rpx 40rpx 40rpx;
+
+.icon-address {
+  width: 32rpx;
+  height: 38rpx;
 }
-.right image{
-  width: 23rpx;
-  margin-left: 460rpx;
+
+.icon-about {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.icon-call {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.icon-suggest {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.user-text {
+  flex: 1;
+  height: 44rpx;
+  display: inline-block;
+  line-height: 44rpx;
+  color: #333;
+  font-weight: 500;
+}
+
+.feedlist {
+  position: relative;
+}
+
+.feedbtn {
+  position: absolute;
+  z-index: 99;
+  opacity: 0.1;
+}
+
+.feedbtn::after {
+  border: none;
+  border-radius: 0;
+}
+
+.cardlength {
+  height: 100%;
+  font-size: 26rpx;
+  color: #999;
+  display: flex;
+  align-items:center;
+}
+
+.card-list {
+  display: inline-block;
+  margin-right: 12rpx;
 }

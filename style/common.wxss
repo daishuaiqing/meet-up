@@ -32,6 +32,10 @@
   color: #fff;
 }
 
+.text-green{
+  color: #01c1a7;
+}
+
 /* 背景色 */
 
 .bg-red {
@@ -48,6 +52,10 @@
 
 .bg-grey {
   background-color: #e5e5e7;
+}
+
+.bg-green{
+  background-color: #01C1A7;
 }
 
 /* 字体大小 */

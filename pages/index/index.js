@@ -1,5 +1,6 @@
 //index.js
 //获取应用实例
+const { getActList } = require("../../api/act")
 const app = getApp()
 
 Page({
@@ -23,7 +24,20 @@ Page({
       url: '../logs/logs'
     })
   },
+  goDetail: function(){
+    wx.navigateTo({
+      url: '/pages/act/detail/detail'
+    })
+  },
+  getAct: function(){
+    getActList().then(res=>{
+      this.setData({
+        actArr: res
+      })
+    })
+  },
   onLoad: function () {
+    this.getAct()
     //加载语言内容
     this.setData({
       lang: app.globalData.lang

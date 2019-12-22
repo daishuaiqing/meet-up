@@ -1,46 +1,60 @@
-<!--pages/user/user.wxml-->
-<view class="flex padding flex-v-center bg-red header">
-  <view class="avatar">
-    <image src="/image/user/avatar_unlogin.png"></image>
+<scroll-view scroll-y class="scrollPage">
+  <view class="user-header">
+    <block>
+      <image src="{{userInfo.avatarUrl?userInfo.avatarUrl:'/image/user/nologin.png'}}" class="png" mode="aspectFit"></image>
+      <view class="user-name" wx:if="{{userInfo}}">
+        <text class="text-ml color-white">{{userInfo.nickName}}</text>
+      </view>
+      <view class="user-name" wx:else>
+        <navigator url="/pages/auth/auth">
+          <view class="loginbutton">点击登录</view>
+        </navigator>
+      </view>
+    </block>
   </view>
-  <view class="username text-white font-xl">点击登录</view>
-</view>
-
-<view>
-  <view class="flex item flex-v-center">
-    <view class="item-icon flex flex-v-center">
-      <image mode="widthFix" src="/image/user/mycard.png"></image>
+  <view class="user-kol">
+    <view class="user-item borbott" bindtap="goCardList">
+      <view class="icon-header">
+        <image class="icon-card" src="/image/user/mycard.png"></image>
+      </view>
+      <text class="user-text">我的资料</text>
+      <view class="cardlength">
+        <image class="img-right" src="/image/common/right.png"></image>
+      </view>
     </view>
-    <view class="margin-left text-dark">我的资料</view>
-    <view class="right">
-      <image mode="widthFix" src="/image/common/right.png"></image>
-    </view>
-  </view>
-  <view class="flex item flex-v-center">
-    <view class="item-icon flex flex-v-center">
-      <image mode="widthFix" src="/image/user/aboutus.png"></image>
-    </view>
-    <view class="margin-left text-dark">关于我们</view>
-    <view class="right">
-      <image mode="widthFix" src="/image/common/right.png"></image>
-    </view>
-  </view>
-  <view class="flex item flex-v-center">
-    <view class="item-icon flex flex-v-center">
-      <image mode="widthFix" src="/image/user/contact.png"></image>
-    </view>
-    <view class="margin-left text-dark">联系客服</view>
-    <view class="right">
-      <image mode="widthFix" src="/image/common/right.png"></image>
+    <view hover-class="none" bindtap="chooseAddress" class="user-item">
+      <view class="icon-header">
+        <image class="icon-address" src="/image/user/address.png"></image>
+      </view>
+      <text class="user-text" style="height:49rpx;">收货地址</text>
+      <image class="img-right" src="/image/common/right.png"></image>
     </view>
   </view>
-  <view class="flex item flex-v-center">
-    <view class="item-icon flex flex-v-center">
-      <image mode="widthFix" src="/image/user/suggest.png"></image>
+  <view class="user-common">
+    <!-- <navigator url="/pages/about/about" hover-class="none" class="user-item borbott"> -->
+    <view hover-class="none" class="user-item borbott" bindtap="showTip">
+      <view class="icon-header">
+        <image class="icon-about" src="/image/user/aboutus.png"></image>
+      </view>
+      <text class="user-text">关于我们</text>
+      <image class="img-right" src="/image/common/right.png"></image>
     </view>
-    <view class="margin-left text-dark">意见反馈</view>
-    <view class="right">
-      <image mode="widthFix" src="/image/common/right.png"></image>
+    <!-- </navigator> -->
+    <view bindtap="makePhoneCall" hover-class="none" class="user-item borbott">
+      <view class="icon-header">
+        <image class="icon-call" src="/image/user/contact.png"></image>
+      </view>
+      <view class="user-text">联系客服</view>
+      <image class="img-right" src="/image/common/right.png"></image>
+    </view>
+    <view hover-class="none" class="user-item feedlist">
+      <view class="icon-header">
+        <image class="icon-suggest" src="/image/user/suggest.png"></image>
+      </view>
+      <view class="user-text flex-space">意见反馈</view>
+      <image class="img-right" src="/image/common/right.png"></image>
+      <button open-type="feedback" size="default" class="feedbtn" style="width:100%;height:100%;"></button>
     </view>
   </view>
-</view>
+</scroll-view>
+<auth wx:if="{{showModal}}" bind:clickcancle="clickcancle" bind:clickconfirm="clickconfirm"></auth>

@@ -1,4 +1,5 @@
 // 封装微信的request
+const app = getApp();
 export const request = (url, data = {}, method = "GET") => {
   return new Promise((resolve, reject) => {
     let token = app.globalData.token

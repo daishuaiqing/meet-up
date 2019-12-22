@@ -1,0 +1,118 @@
+<!--pages/act/detail/detail.wxml-->
+<view class="announce_detail">
+  <view class="base_info radiu-ss">
+    <view class="announce-name-flex info-name">
+      <view class="announceNmae">周笔畅2019LUNAR巡回演唱会-上海站</view>
+      <view class="info-salary color-red text-price">1000</view>
+    </view>
+    <view class="endTime flex">
+      <view class="endTime-title"> 报名截止</view>
+      <view class="flex-center flex-space">
+        2019-12-14
+      </view>
+    </view>
+    <view class="detail-list">
+      <view class="flex-detail">
+        <image src="/image/detail/need.png" class="detailImg"></image>
+        <text class="detail-item">活动人数:</text>
+        <text class="color-black">200人</text>
+      </view>
+      <view class="flex-detail">
+        <image src="/image/detail/plat.png" class="detailImg"></image>
+        <text class="detail-item">活动时间:</text>
+        <text class="color-black">2019-12-30 12:00</text>
+      </view>
+      <view class="flex-detail">
+        <image src="/image/detail/type.png" class="detailImg"></image>
+        <text class="detail-item">活动地点:</text>
+        <text class="color-black">上海 人民广场世贸大厦5L</text>
+      </view>
+    </view>
+    <view class="flex-between detail-user flex-v-center">
+      <view class="flex-space user">
+        <image class="userimg" src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI6VXLO35tTZ3T9xJibYGHOdFJdnF56iaKESYEibVYXzf5fwrLXVbunm1bAcXMUW2yWXoSvG1h1IgOKg/132"></image>
+        <text class="color-black text-xx">青柠檬</text>
+      </view>
+      <view class="text-xx color-grey">2小时前发布</view>
+    </view>
+  </view>
+  <view class="detail_info radiu-ss">
+    <view class="detail-title">
+      <text class="contact-header"></text>
+      <text class="detail-area">活动详情</text>
+    </view>
+    <view class="text-df color-black">
+      <text></text>
+    </view>
+  </view>
+  <view class="detail_info radiu-ss">
+    <view class="detail-title">
+      <text class="contact-header"></text>
+      <text class="detail-area">联系方式</text>
+    </view>
+    <view class="contact-list">
+      <text class="contact-detail">联系人:</text>
+      <text class="color-black">青柠檬</text>
+    </view>
+    <view class="contact-list">
+      <text class="contact-detail">微信:</text>
+      <block wx:if="{{hasApply}}">
+        <text class="color-black">{{announce.bmsAnnounce.wxNumber}}</text>
+        <view class="copy" data-wechat="{{announce.bmsAnnounce.wxNumber}}" bindtap="copywechat">复制</view>
+      </block>
+      <block wx:else>
+        <text class="color-black text-df">报名后可见</text>
+      </block>
+    </view>
+    <view class="contact-list phonenum">
+      <text class="contact-detail">手机号:</text>
+      <text class="color-black text-df">{{hasApply?announce.bmsAnnounce.phoneNumber:'报名后可见'}}</text>
+    </view>
+  </view>
+  <view class="detail_info applynum radiu-ss">
+    <view class="detail-title flex-between flex-v-center">
+      <view>
+        <text class="contact-header"></text>
+        <text class="detail-area">报名人数</text>
+      </view>
+      <view class="text-xx color-grey">
+        <text class="seeresult">347人查看</text>
+        <text>112人报名</text>
+      </view>
+    </view>
+    <view class="seegroup">
+      <block wx:for="{{23}}" wx:key="{{index}}">
+        <view>
+          <image class="cu-avatar round sm seeuser" src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI6VXLO35tTZ3T9xJibYGHOdFJdnF56iaKESYEibVYXzf5fwrLXVbunm1bAcXMUW2yWXoSvG1h1IgOKg/132" mode="aspectFit"></image>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+
+<view class="bottom-detail">
+  <view class="action">
+    <view class="bottombt" bindtap="goIndex">
+      <view>
+        <image class="homebtn" src="/image/detail/home.png"></image>
+      </view>
+      <view>首页</view>
+    </view>
+    <view class="sharebt" bindtap="sharebtn">
+      <view>
+        <image class="sharebtn" src="/image/detail/share.png"></image>
+      </view>
+      <view>分享</view>
+      <button class="openshare" open-type="share"></button>
+    </view>
+    <view class="btn-state state-has-state" wx:if="{{isend===true}}">已截止</view>
+    <view wx:else class="btn-state {{hasApply===true?'state-has-state':'state-no-state'}}">
+      <view wx:if="{{hasApply===false}}" bindtap="enroll">我要报名</view>
+      <view wx:else>已报名</view>
+    </view>
+  </view>
+</view>
+
+<modal wx:if="{{showModal}}" plateformName="{{announce.bmsAnnounce.platformName}}" bind:clickcancle="clickcancle" bind:clickconfirm="clickconfirm"></modal>
+
+<auth wx:if="{{showAuthModel}}" bind:clickcancle="cancelAuth" bind:clickconfirm="confirmAuth"></auth>

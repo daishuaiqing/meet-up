@@ -1,23 +1,23 @@
 <!--index.wxml-->
 <view class="header top-fixed bg-white">
-  <view class="flex">
-    <view wx:for="{{catArr}}" data-index="{{index}}" wx:key="{{index}}" bindtap="changeCat" class="font-md {{index==currentIndex?'cat-style-active':'cat-style'}}">{{item.name}}</view>
+  <view class="flex header-padding">
+    <view wx:for="{{catArr}}" data-index="{{index}}" wx:key="{{index}}" bindtap="changeCat" class="{{index==currentIndex?'cat-style-active':'cat-style'}}">{{item.name}}</view>
   </view>
 </view>
-<view class="padding list">
-  <view class="flex item" wx:for="{{10}}">
+<view class="list">
+  <view class="flex item" wx:for="{{actArr}}" bindtap="goDetail">
     <view class="item-img">
       <image src="https://i.loli.net/2019/12/09/bneVCPyAM2oNhFT.png" />
     </view>
     <view class="item-content flex-between">
-      <view class="font-lg text-black item-title">周笔畅2019LUNAR巡回演唱会-上海站</view>
+      <view class="font-lg text-black">{{item.name}}</view>
       <view class="text-gray font-sm flex-column">
         <text class="block">2019.12.14 19:30 周六</text>
-        <text class="block item-addr">上海 梅赛德斯奔驰中心</text>
+        <text class="block item-addr">{{item.address}}</text>
       </view>
       <view class="flex">
         <view class="text-orange font-xs book-tag">预定</view>
-        <view class="text-bright font-sm">580-1680元</view>
+        <view class="text-bright font-sm">{{item.money===0?'免费':item.money+'元'}}</view>
       </view>
     </view>
     <view class="item-tag text-barilla font-xxs">自营</view>
