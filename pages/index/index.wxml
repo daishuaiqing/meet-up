@@ -5,9 +5,9 @@
   </view>
 </view>
 <view class="list">
-  <view class="flex item" wx:for="{{actArr}}" bindtap="goDetail">
+  <view class="flex item" wx:for="{{actArr}}" bindtap="goDetail" data-item="{{item}}">
     <view class="item-img">
-      <image src="https://i.loli.net/2019/12/09/bneVCPyAM2oNhFT.png" />
+      <image src="{{item.posterUrl}}" />
     </view>
     <view class="item-content flex-between">
       <view class="font-lg text-black">{{item.name}}</view>

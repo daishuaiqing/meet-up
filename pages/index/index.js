@@ -5,7 +5,7 @@ const app = getApp()
 
 Page({
   data: {
-    catArr: [{ name: "演唱会" }, { name: "话剧歌剧" }, { name: "休闲展览" }, { name: "戏曲艺术" }],
+    catArr: [{ name: "精品推荐" }, { name: "趣味特色" }, { name: "休闲展览" }, { name: "教育培训" }],
     currentIndex: 0,
     motto: 'Hello World',
     userInfo: {},
@@ -24,9 +24,10 @@ Page({
       url: '../logs/logs'
     })
   },
-  goDetail: function(){
+  goDetail: function(e){
+    let param = e.currentTarget.dataset.item
     wx.navigateTo({
-      url: '/pages/act/detail/detail'
+      url: '/pages/act/detail/detail?param=' + encodeURIComponent(JSON.stringify(param))
     })
   },
   getAct: function(){
@@ -34,7 +35,11 @@ Page({
       this.setData({
         actArr: res
       })
+      wx.stopPullDownRefresh()
     })
+  },
+  onPullDownRefresh: function(){
+    this.getAct()
   },
   onLoad: function () {
     this.getAct()

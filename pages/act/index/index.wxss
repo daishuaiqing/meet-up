@@ -1,1 +1,4 @@
 /* pages/act/index/index.wxss */
+.poster{
+  height: 300rpx;
+}
