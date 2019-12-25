@@ -1,5 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "auth": "../../component/authModal/auth"
+  },
   "navigationBarTitleText": "帐号",
   "navigationBarBackgroundColor": "#01c1a7",
   "navigationBarTextStyle": "white"

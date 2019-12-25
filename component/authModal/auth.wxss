@@ -1,0 +1,68 @@
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index:99;
+}
+.context{
+  text-align: center;
+}
+.modalcontent {
+  margin: 324rpx auto;
+  width: 636rpx;
+  height: 428rpx;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16rpx;
+  background: #fff;
+  opacity: 1;
+  z-index: 999;
+}
+
+.modal-text {
+  width: 636rpx;
+  height: 328rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  color:#000000;
+  flex-direction: column;
+  flex:1;
+}
+.modalimg{
+  width:132rpx;
+  height: 132rpx;
+  border-radius: 50%;
+  margin-bottom: 16rpx;
+}
+.modalimg .nocard{
+  width:132rpx;
+  height: 132rpx;
+  border-radius: 50%;
+}
+
+.modalbtn {
+  width: 636rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 32rpx;
+}
+
+.modalbtn .btn {
+  width:318rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tocreate {
+  color:#FFFFFF;
+  background: #01c1a7;
+}

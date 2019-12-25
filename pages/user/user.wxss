@@ -61,26 +61,31 @@
 }
 
 .icon-card {
+  margin-top: 10rpx;
   width: 40rpx;
   height: 40rpx;
 }
 
 .icon-address {
+  margin-top: 6rpx;
   width: 32rpx;
   height: 38rpx;
 }
 
 .icon-about {
+  margin-top: 10rpx;
   width: 40rpx;
   height: 40rpx;
 }
 
 .icon-call {
+  margin-top: 10rpx;
   width: 40rpx;
   height: 40rpx;
 }
 
 .icon-suggest {
+  margin-top: 10rpx;
   width: 40rpx;
   height: 40rpx;
 }
