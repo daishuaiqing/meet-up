@@ -1,4 +1,5 @@
 // pages/act/detail/detail.js
+const { getDetailById } = require('../../../api/act.js');
 Page({
 
   /**
@@ -12,9 +13,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let param = JSON.parse(decodeURIComponent(options.param))
-    this.setData({
-      act: param
+    let id = JSON.parse(decodeURIComponent(options.id))
+    this.getDetailById({
+      id: id
+    })
+  },
+
+  getDetailById: function(param){
+    getDetailById(param).then(res=>{
+      this.setData({
+        act: res.bmsActivity,
+        books: res.bmsBooks,
+        user: res.umsUser
+      })
     })
   },
 

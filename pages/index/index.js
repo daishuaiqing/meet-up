@@ -27,7 +27,7 @@ Page({
   goDetail: function(e){
     let param = e.currentTarget.dataset.item
     wx.navigateTo({
-      url: '/pages/act/detail/detail?param=' + encodeURIComponent(JSON.stringify(param))
+      url: '/pages/act/detail/detail?id=' + encodeURIComponent(JSON.stringify(param.id))
     })
   },
   getAct: function(){

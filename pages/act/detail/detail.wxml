@@ -30,8 +30,8 @@
     </view>
     <view class="flex-between detail-user flex-v-center">
       <view class="flex-space user">
-        <image class="userimg" src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI6VXLO35tTZ3T9xJibYGHOdFJdnF56iaKESYEibVYXzf5fwrLXVbunm1bAcXMUW2yWXoSvG1h1IgOKg/132"></image>
-        <text class="color-black text-xx">青柠檬</text>
+        <image class="userimg" src="{{user.avatar}}"></image>
+        <text class="color-black text-xx">{{user.nick}}</text>
       </view>
       <view class="text-xx color-grey">2小时前发布</view>
     </view>
@@ -52,13 +52,13 @@
     </view>
     <view class="contact-list">
       <text class="contact-detail">联系人:</text>
-      <text class="color-black">青柠檬</text>
+      <text class="color-black">{{act.contacts}}</text>
     </view>
     <view class="contact-list">
       <text class="contact-detail">微信:</text>
       <block wx:if="{{hasApply}}">
         <text class="color-black">{{act.wxNumber}}</text>
-        <view class="copy" data-wechat="{{announce.bmsAnnounce.wxNumber}}" bindtap="copywechat">复制</view>
+        <view class="copy" data-wechat="{{act.wxNumber}}" bindtap="copywechat">复制</view>
       </block>
       <block wx:else>
         <text class="color-black text-df">报名后可见</text>
@@ -77,13 +77,13 @@
       </view>
       <view class="text-xx color-grey">
         <text class="seeresult">{{act.hits}}人查看</text>
-        <text>{{item.applys}}人报名</text>
+        <text>{{act.applys}}人报名</text>
       </view>
     </view>
     <view class="seegroup">
-      <block wx:for="{{23}}" wx:key="{{index}}">
+      <block wx:for="{{books}}" wx:key="{{index}}">
         <view>
-          <image class="cu-avatar round sm seeuser" src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI6VXLO35tTZ3T9xJibYGHOdFJdnF56iaKESYEibVYXzf5fwrLXVbunm1bAcXMUW2yWXoSvG1h1IgOKg/132" mode="aspectFit"></image>
+          <image class="cu-avatar round sm seeuser" src="{{item.avatar}}" mode="aspectFit"></image>
         </view>
       </block>
     </view>
