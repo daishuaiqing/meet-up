@@ -1,4 +1,4 @@
-/* pages/userInfo/profiles/profiles.wxss */
+/* pages/userInfo/edit/edit.wxss */
 .add-card-content {
   width: 750rpx;
   height: 100vh;
@@ -67,12 +67,4 @@
   text-align: right;
   box-sizing: border-box;
   font-size: 28rpx;
-}
-
-.title-value{
-  height: 100%;
-  box-sizing: border-box;
-  font-size: 28rpx;
-  display: flex;
-  align-items: center;
 }

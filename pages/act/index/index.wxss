@@ -1,4 +1,124 @@
 /* pages/act/index/index.wxss */
-.poster{
-  height: 300rpx;
+
+page {
+  background: #f7f8f9;
+  font-weight: 400;
+}
+
+.filter_nav {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background: #fff;
+}
+
+.mes-top {
+  width: 750rpx;
+  height: 90rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tabtitle {
+  flex: 1;
+  height: 90rpx;
+  font-size: 30rpx;
+}
+
+swiper {
+  width: 750rpx;
+  min-height: 100vh;
+}
+
+.list {
+  width: 750rpx;
+  height: 100%;
+  box-sizing: border-box;
+  padding-bottom: 100rpx;
+}
+
+.card_mid {
+  position: relative;
+}
+
+.checkstate {
+  position: absolute;
+  right: 0;
+}
+
+.card {
+  position: relative;
+}
+
+.checkstate {
+  position: absolute;
+  right: 0;
+  top: 110rpx;
+  width: 90rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 200rpx 0rpx 0rpx 200rpx;
+  font-size: 22rpx;
+}
+
+/* 审核中 */
+
+.checking {
+  background: #f49946;
+  color: #fff;
+}
+
+.text-noprice {
+  font-size: 26rpx;
+  color: #fc3f47;
+  font-weight: 500;
+}
+
+.item-img image {
+  width: 209rpx;
+  height: 283rpx;
+}
+
+.item-content {
+  width: 407rpx;
+  height: 283rpx;
+  margin-left: 21rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-tag {
+  height: 283rpx;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.item-title {
+  font-weight: bold;
+}
+
+.item-addr {
+  margin-top: 8rpx;
+}
+
+.book-tag {
+  width: 58rpx;
+  height: 38rpx;
+  background: #faede7;
+  line-height: 38rpx;
+  text-align: center;
+  margin-right: 20rpx;
+}
+
+.item {
+  margin-bottom: 12rpx;
+  background: #fff;
+  padding: 20rpx;
+}
+
+.top-fixed {
+  position: fixed;
+  top: 0;
 }

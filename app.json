@@ -5,7 +5,9 @@
     "pages/auth/auth",
     "pages/act/index/index",
     "pages/act/detail/detail",
+    "pages/act/book/book",
     "pages/userInfo/profiles/profiles",
+    "pages/userInfo/edit/edit",
     "pages/logs/logs"
   ],
   "tabBar": {

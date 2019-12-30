@@ -1,21 +1,11 @@
-// pages/act/index/index.js
-const { myBookList } = require('../../../api/act.js');
+// pages/act/book/book.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    showModal: false,
-    bookArr: []
-  },
 
-  myBookList: function(){
-    myBookList().then(res=>{
-      this.setData({
-        bookArr: res
-      })
-    })
   },
 
   /**
@@ -36,7 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.myBookList()
+
   },
 
   /**

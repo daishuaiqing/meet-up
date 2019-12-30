@@ -1,13 +1,39 @@
 <!--pages/act/index/index.wxml-->
-<!-- <view>我创建的活动</view> -->
+<view class="flex-column filter_nav">
+  <view class="mes-top">
+    <view class="tabtitle flex flex-v-center margin-left color-black text-bold">我参与的活动</view>
+  </view>
 
-<view class="flex flex-between">
-  <view>我参与的活动</view>
-  <view>all</view>
-</view>
-<view>
-<view class="poster"></view>
-<view>距离还有3天时间</view>
-<view></view>
-</view>
+  <auth wx:if="{{showModal}}" bind:clickcancle="clickcancle" bind:clickconfirm="clickconfirm"></auth>
+  <view class="noarea" wx:if="{{bookArr.length==0}}">
+    <view class="noapplylist">
+      <view class="nodefault">
+        <image class="default-img" mode="aspectFit" src="/image/common/default.png"></image>
+      </view>
+      <view class="tiptext">您还未参与任何通告</view>
+      <navigator open-type="switchTab" url="/pages/index/index">
+        <view class="tosee-bor flex-center">去逛逛</view>
+      </navigator>
+    </view>
+  </view>
+  <scroll-view scroll-y class="list bg-grey" bindscrolltolower="applyLower" wx:if="{{bookArr.length!==0}}">
+    <view class="flex item" wx:for="{{bookArr}}" bindtap="goDetail" data-item="{{item}}">
+      <view class="item-img">
+        <image src="{{item.posterUrl}}" />
+      </view>
+      <view class="item-content flex-between">
+        <view class="font-lg text-black">{{item.name}}</view>
+        <view class="text-gray font-sm flex-column">
+          <text class="block">2019.12.14 19:30 周六</text>
+          <text class="block item-addr">{{item.address}}</text>
+        </view>
+        <view class="flex">
+          <view class="text-orange font-xs book-tag">预定</view>
+          <view class="text-bright font-sm">{{item.money===0?'免费':item.money+'元'}}</view>
+        </view>
+      </view>
+      <view class="item-tag text-barilla font-xxs">自营</view>
+    </view>
+  </scroll-view>
 
+</view>

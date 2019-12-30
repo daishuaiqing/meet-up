@@ -8,3 +8,7 @@ export const getActList = (info) => {
 export const getDetailById = (info) => {
   return request(baseUrl + "/bms/activity/getDetailById", info, 'get')
 }
+
+export const myBookList = (info) => {
+  return request(baseUrl + "/bms/book/myBookList", info, 'get')
+}

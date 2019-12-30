@@ -1,0 +1,40 @@
+<!--pages/userInfo/edit/edit.wxml-->
+<view class="add-card-content">
+
+	<view class="creat-platform">
+		<view class="choose-item">
+			<view class="title">名片平台</view>
+			<picker bindchange="platformPickerChange" range-key="name" range="{{platformArr}}">
+				<view class="picker-btn">
+					{{platformName?platformName:"请选择"}}
+					<image class="img-right" src="/images/common/right.png"></image>
+				</view>
+			</picker>
+		</view>
+	</view>
+	<view class="creat-platform" bindtap="goGetPlateform">
+		<!-- <navigator url="../card/card"> -->
+		<view class="choose-item platinfo">
+			<view class="title">平台资料</view>
+			<view class="picker-btn">
+				<text>{{cardInfo?cardInfo.nickName:'获取平台资料'}}</text>
+				<image class="img-right" src="/images/common/right.png"></image>
+			</view>
+		</view>
+		<!-- </navigator> -->
+	</view>
+	<view class="creat-platform">
+		<view class="choose-item">
+			<view class="title">微信号</view>
+			<input class="inputwe" placeholder="请输入微信号" data-name="wxNumber" bindinput="getInput"></input>
+		</view>
+	</view>
+	<view class="detailtext">
+		<view>
+			<view class="title">详细介绍</view>
+			<textarea class="textarea-intro" maxlength="-1" disabled="{{modalName!=null}}" data-name="introduce" bindinput="getInput" placeholder="请输入介绍信息" maxlength="128"></textarea>
+		</view>
+	</view>
+	<view class="submit-card flex-center color-white" bindtap="submit" wx:if="{{hasClick===false}}">提交</view>
+	<view class="submit-card flex-center color-white" wx:if="{{hasClick===true}}">提交</view>
+</view>
