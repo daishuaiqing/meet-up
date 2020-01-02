@@ -15,7 +15,7 @@ Page({
     if (app.globalData.token) {
       console.log(app.globalData.token)
       wx.navigateTo({
-        url: '/pages/userInfo/profiles/profiles'
+        url: '/pages/userInfo/edit/edit'
       })
     } else {
       this.setData({

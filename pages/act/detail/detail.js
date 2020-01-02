@@ -6,7 +6,33 @@ Page({
    * 页面的初始数据
    */
   data: {
-    hasApply:false
+    hasApply:false,
+    showModal: false
+  },
+
+  /**
+   * 我要报名
+   */
+  enroll: function(){
+    this.setData({
+      showModal: true
+    })
+  },
+
+  // 取消创建名片
+  clickcancle(e) {
+    this.setData({
+      showModal: e.detail
+    })
+  },
+  //确定去创建名片
+  clickconfirm(e) {
+    this.setData({
+      showModal: false
+    })
+    wx.navigateTo({
+      url: '/pages/userInfo/edit/edit',
+    })
   },
 
   /**

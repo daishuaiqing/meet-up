@@ -86,6 +86,13 @@
 					"id": -1,
 					"name": "pages/userInfo/profiles/profiles",
 					"pathName": "pages/userInfo/profiles/profiles",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/edit/edit",
+					"pathName": "pages/userInfo/edit/edit",
 					"scene": null
 				}
 			]

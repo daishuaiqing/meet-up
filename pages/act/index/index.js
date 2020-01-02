@@ -1,5 +1,6 @@
 // pages/act/index/index.js
 const { myBookList } = require('../../../api/act.js');
+const app = getApp();
 Page({
 
   /**
@@ -36,7 +37,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.myBookList()
+    if(app.globalData.token){
+      this.myBookList()
+    }
   },
 
   /**

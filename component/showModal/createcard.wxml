@@ -1,0 +1,14 @@
+<view  class="modal" >
+  <view class="modalcontent">
+   <view class="modal-text">
+     <view class="modalimg">
+      <image class="nocard" mode="aspectFill" src="/image/common/create.png"></image>
+     </view>
+     <view>请先完善资料</view>
+   </view>
+   <view class="modalbtn">
+   <view class="cancel btn" catchtap="cancle">取消</view>
+   <view class="btn tocreate" catchtap="confirm">完善资料</view>
+   </view>
+  </view>
+</view>azz

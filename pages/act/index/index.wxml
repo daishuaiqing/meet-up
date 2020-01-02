@@ -10,7 +10,7 @@
       <view class="nodefault">
         <image class="default-img" mode="aspectFit" src="/image/common/default.png"></image>
       </view>
-      <view class="tiptext">您还未参与任何通告</view>
+      <view class="tiptext">您还未参与任何活动</view>
       <navigator open-type="switchTab" url="/pages/index/index">
         <view class="tosee-bor flex-center">去逛逛</view>
       </navigator>
