@@ -3,30 +3,30 @@
 	<view class="detail-area">
 		<view class="cu-form-group">
 			<view>姓名</view>
-			<input class="inputcenter" placeholder="请输入联系人姓名" data-name="form.nick" value="{{form.nick}}" bindinput="getInput"></input>
+			<input class="inputcenter" placeholder="请输入联系人姓名" data-name="form.name" value="{{form.nick}}" bindinput="getInput"></input>
 		</view>
 		<view class="cu-type flex">
 			<view class="group-flex">
 				<view>性别</view>
-				<picker class="picker-bb" bindchange="rewardPickerChange" value="{{rewardIndex}}" range-key="name" range="{{rewardType}}">
+				<picker class="picker-bb" bindchange="genderPickerChange" range-key="name" range="{{genderArr}}">
 					<view class="picker-text">
-						{{form.catName?form.catName:"请选择"}}
+						{{genderStr?genderStr:"请选择"}}
 					</view>
 				</picker>
 			</view>
 			<view class="center-divsion"></view>
 			<view class="group-flex">
 				<view>生日</view>
-				<picker class="picker-bb" bindchange="catPickerChange" range-key="name" range="{{catArr}}">
+				<picker class="picker-bb" value="{{form.birthday}}" mode="date" bindchange="datePickerChange">
 					<view class="picker-text">
-						{{form.catName?form.catName:"请选择"}}
+						{{form.birthday?form.birthday:"请选择"}}
 					</view>
 				</picker>
 			</view>
 			<view class="center-divsion"></view>
 			<view class="group-flex">
 				<view>身高</view>
-				<input type="number" class="picker-bb" placeholder="请输入" data-name="form.number" value="{{form.number}}" bindinput="getInput"></input>
+				<input type="number" class="picker-bb" placeholder="请输入" data-name="form.height" value="{{form.height}}" bindinput="getInput"></input>
 			</view>
 		</view>
 		<view class="cu-form-group ">
@@ -35,34 +35,29 @@
 		</view>
 		<view class="cu-form-group no-bottom">
 			<view>电话</view>
-			<input type="number" class="inputcenter" placeholder="请输入联系人电话" data-name="form.phoneNumber" value="{{form.phoneNumber}}" bindinput="getInput"></input>
+			<input type="number" class="inputcenter" placeholder="请输入联系人电话" data-name="form.phone" value="{{form.phone}}" bindinput="getInput"></input>
 		</view>
 	</view>
 	<view class="detail-area">
 		<view class="cu-type flex no-bottom">
 			<view class="group-flex">
 				<view>现居城市</view>
-				<input class="picker-bb" placeholder="请输入" data-name="form.number" value="{{form.number}}" bindinput="getInput"></input>
+				<input class="picker-bb" placeholder="请输入" data-name="form.city" value="{{form.city}}" bindinput="getInput"></input>
 			</view>
 			<view class="center-divsion"></view>
 			<view class="group-flex">
 				<view>学校</view>
-				<input class="picker-bb" placeholder="请输入" data-name="form.number" value="{{form.number}}" bindinput="getInput"></input>
+				<input class="picker-bb" placeholder="请输入" data-name="form.school" value="{{form.number}}" bindinput="getInput"></input>
 			</view>
 			<view class="center-divsion"></view>
 			<view class="group-flex">
 				<view>学历</view>
-				<picker class="picker-bb" bindchange="catPickerChange" range-key="name" range="{{catArr}}">
+				<picker class="picker-bb" bindchange="xlPickerChange" range="{{xlArr}}">
 					<view class="picker-text">
-						{{form.catName?form.catName:"请选择"}}
+						{{form.education?form.education:"请选择"}}
 					</view>
 				</picker>
 			</view>
-		</view>
-
-		<view class="cu-form-group no-bottom" wx:if="{{form.rewardType==1?true:false}}">
-			<view class="title">金额</view>
-			<input type="number" placeholder="请输入金额" class="inputcenter text-df color-grey" data-name="form.salary" value="{{form.salary}}" bindinput="getInput"></input>
 		</view>
 	</view>
 	<view class="intro-area">
@@ -76,7 +71,7 @@
 			<view wx:for="{{tempFilePaths}}">
 				<view class="imgBox">
 					<view class="delImg" catchtap="delImg" data-index="{{index}}">
-						<image src="/images/common/del.png" class="del"></image>
+						<image src="/image/common/del.png" class="del"></image>
 					</view>
 					<image src="{{item}}" class="imgs" mode="aspectFit">
 					</image>
