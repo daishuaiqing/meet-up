@@ -8,3 +8,11 @@ export const login = (info) => {
 export const reLogin = (info) => {
   return request(baseUrl + "/ums/user/reLogin", info, 'POST')
 }
+
+export const saveProfiles = (info) => {
+  return request(baseUrl + "/ums/profiles/save", info, 'POST')
+}
+
+export const getMyProfiles = () => {
+  return request(baseUrl + "/ums/profiles/getMyProfiles")
+}

@@ -3,7 +3,7 @@
 	<view class="detail-area">
 		<view class="cu-form-group">
 			<view>姓名</view>
-			<input class="inputcenter" placeholder="请输入联系人姓名" data-name="form.name" value="{{form.nick}}" bindinput="getInput"></input>
+			<input class="inputcenter" placeholder="请输入联系人姓名" data-name="form.name" value="{{form.name}}" bindinput="getInput"></input>
 		</view>
 		<view class="cu-type flex">
 			<view class="group-flex">
@@ -47,7 +47,7 @@
 			<view class="center-divsion"></view>
 			<view class="group-flex">
 				<view>学校</view>
-				<input class="picker-bb" placeholder="请输入" data-name="form.school" value="{{form.number}}" bindinput="getInput"></input>
+				<input class="picker-bb" placeholder="请输入" data-name="form.school" value="{{form.school}}" bindinput="getInput"></input>
 			</view>
 			<view class="center-divsion"></view>
 			<view class="group-flex">
@@ -81,5 +81,5 @@
 		</view>
 	</view>
 
-	<view class="common-btn state-no-state subbtn" bindtap="submit">提交</view>
+	<view class="common-btn state-no-state subbtn" bindtap="submit">保存</view>
 </view>

@@ -56,7 +56,7 @@
     </view>
     <view class="contact-list">
       <text class="contact-detail">微信:</text>
-      <block wx:if="{{hasApply}}">
+      <block wx:if="{{bookStatus}}">
         <text class="color-black">{{act.wxNumber}}</text>
         <view class="copy" data-wechat="{{act.wxNumber}}" bindtap="copywechat">复制</view>
       </block>
@@ -66,7 +66,7 @@
     </view>
     <view class="contact-list phonenum">
       <text class="contact-detail">手机号:</text>
-      <text class="color-black text-df">{{hasApply?act.phoneNumber:'报名后可见'}}</text>
+      <text class="color-black text-df">{{bookStatus?act.phoneNumber:'报名后可见'}}</text>
     </view>
   </view>
   <view class="detail_info applynum radiu-ss">
@@ -106,8 +106,8 @@
       <button class="openshare" open-type="share"></button>
     </view>
     <view class="btn-state state-has-state" wx:if="{{isend===true}}">已截止</view>
-    <view wx:else class="btn-state {{hasApply===true?'state-has-state':'state-no-state'}}">
-      <view wx:if="{{hasApply===false}}" bindtap="enroll">我要报名</view>
+    <view wx:else class="btn-state {{bookStatus===true?'state-has-state':'state-no-state'}}">
+      <view wx:if="{{bookStatus===false}}" bindtap="enroll">我要报名</view>
       <view wx:else>已报名</view>
     </view>
   </view>

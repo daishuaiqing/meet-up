@@ -3,5 +3,7 @@
     "auth": "../../../component/authModal/auth"
   },
   "navigationBarTitleText": "消息",
+  "navigationBarBackgroundColor": "#01c1a7",
+  "navigationBarTextStyle": "white",
   "enablePullDownRefresh": true
 }

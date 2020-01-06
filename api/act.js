@@ -12,3 +12,7 @@ export const getDetailById = (info) => {
 export const myBookList = (info) => {
   return request(baseUrl + "/bms/book/myBookList", info, 'get')
 }
+
+export const checkBookStatus = (info) => {
+  return request(baseUrl + "/bms/book/checkBookStatus", info, 'get')
+}
