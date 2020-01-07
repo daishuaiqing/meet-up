@@ -93,6 +93,14 @@
 					"id": -1,
 					"name": "pages/userInfo/edit/edit",
 					"pathName": "pages/userInfo/edit/edit",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "pages/act/book/book",
+					"pathName": "pages/act/book/book",
+					"query": "act=3",
 					"scene": null
 				}
 			]

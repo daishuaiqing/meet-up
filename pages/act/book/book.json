@@ -1,3 +1,8 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "modal": "../../../component/showModal/createcard"
+  },
+  "navigationBarTitleText": "报名活动",
+  "navigationBarBackgroundColor": "#01c1a7",
+  "navigationBarTextStyle": "white"
 }

@@ -95,6 +95,11 @@ Page({
           icon: 'success',
           duration: 1000
         })
+        setTimeout(function(){
+          wx.navigateBack({
+            delta: 1
+          })
+        },1000)
       }
       this.setData({
         form: res,

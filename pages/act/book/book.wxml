@@ -1,2 +1,44 @@
 <!--pages/act/book/book.wxml-->
-<text>pages/act/book/book.wxml</text>
+<view class="margin-box padding bg-white">
+  <view class="flex">
+    <view class="text-gray name-width font-lg">名称:</view>
+    <view class="text-black value-width font-lg">{{act.name}}</view>
+  </view>
+  <view class="flex margin-top">
+    <view class="text-gray name-width font-lg">时间:</view>
+    <view class="text-black font-lg">{{act.activityStartDt}}</view>
+  </view>
+  <view class="flex margin-top">
+    <view class="text-gray name-width font-lg">地点:</view>
+    <view class="text-black font-lg">{{act.address}}</view>
+  </view>
+  <view class="flex margin-top">
+    <view class="text-gray name-width font-lg">价格:</view>
+    <view class="text-black font-lg text-red">{{act.money===0?'免费':act.money}}</view>
+  </view>
+</view>
+<view wx:if="{{hasCard}}" class="margin-box padding bg-white">
+  <view class="flex">
+    <view class="text-gray font-lg">姓名:</view>
+    <view class="margin-left text-black font-lg">代帅卿</view>
+  </view>
+  <view class="flex margin-top">
+    <view class="text-gray font-lg">手机号码:</view>
+    <view class="margin-left text-black font-lg">18865550002</view>
+  </view>
+</view>
+<view wx:if="{{!hasCard}}" class="margin-box padding bg-white" bindtap="clickconfirm">
+  <view class="flex">
+    <view class="text-gray font-lg">姓名:</view>
+    <view class="margin-left text-black font-lg">立即完善</view>
+  </view>
+  <view class="flex margin-top">
+    <view class="text-gray font-lg">手机号码:</view>
+    <view class="margin-left text-black font-lg">立即完善</view>
+  </view>
+</view>
+
+<view class="bt-submit" bindtap="submit">提交</view>
+
+
+<modal wx:if="{{showModal}}" plateformName="{{announce.bmsAnnounce.platformName}}" bind:clickcancle="clickcancle" bind:clickconfirm="clickconfirm"></modal>

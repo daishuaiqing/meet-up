@@ -16,3 +16,7 @@ export const myBookList = (info) => {
 export const checkBookStatus = (info) => {
   return request(baseUrl + "/bms/book/checkBookStatus", info, 'get')
 }
+
+export const book = (info) => {
+  return request(baseUrl + "/bms/book/add", info, 'POST')
+}

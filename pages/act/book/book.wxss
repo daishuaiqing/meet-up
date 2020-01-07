@@ -1,1 +1,11 @@
 /* pages/act/book/book.wxss */
+.margin-box{
+  margin: 20rpx 15rpx 0rpx 15rpx;
+  border-radius: 10rpx;
+}
+.name-width{
+  width: 100rpx;
+}
+.value-width{
+  width: 550rpx;
+}

@@ -135,12 +135,13 @@
   height: 90rpx;
   width: 670rpx;
   border-radius: 8rpx;
-  background-color: #de433e;
+  background-color: #01c1a7;
   color: #FFFFFF;
   font-size: 32rpx;
   line-height: 90rpx;
   text-align: center;
   margin-left: 40rpx;
+  margin-top: 45rpx;
 }
 
 .bt-sm{

@@ -10,49 +10,29 @@ Page({
    * 页面的初始数据
    */
   data: {
-    bookStatus: false,
-    showModal: false
+    bookStatus: false
   },
 
   /**
    * 我要报名
    */
   enroll: function() {
-    this.setData({
-      showModal: true
+    wx.navigateTo({
+      url: '/pages/act/book/book?act='+this.data.act.id,
     })
   },
 
-  // 取消创建名片
-  clickcancle(e) {
-    this.setData({
-      showModal: e.detail
-    })
-  },
-  //确定去创建名片
-  clickconfirm(e) {
-    this.setData({
-      showModal: false
-    })
-    wx.navigateTo({
-      url: '/pages/userInfo/edit/edit',
-    })
-  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
     let id = JSON.parse(decodeURIComponent(options.id))
-    this.getDetailById({
+    this.setData({
       id: id
     })
-    checkBookStatus({
-      actId: id
-    }).then(res => {
-      this.setData({
-        bookStatus: res
-      })
+    this.getDetailById({
+      id: id
     })
   },
 
@@ -77,7 +57,13 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    checkBookStatus({
+      actId: this.data.id
+    }).then(res => {
+      this.setData({
+        bookStatus: res
+      })
+    })
   },
 
   /**
