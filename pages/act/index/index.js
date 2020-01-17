@@ -19,6 +19,14 @@ Page({
     })
   },
 
+  goDetail: function(e){
+    console.log(e)
+    let param = e.currentTarget.dataset.item.bmsActivity
+    wx.navigateTo({
+      url: '/pages/act/detail/detail?id=' + encodeURIComponent(JSON.stringify(param.id))
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

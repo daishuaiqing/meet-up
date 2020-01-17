@@ -20,3 +20,7 @@ export const checkBookStatus = (info) => {
 export const book = (info) => {
   return request(baseUrl + "/bms/book/add", info, 'POST')
 }
+
+export const unifiedOrder = (info) => {
+  return request(baseUrl + "/wx/pay/createOrder", info, 'get')
+}

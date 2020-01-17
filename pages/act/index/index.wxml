@@ -1,8 +1,8 @@
 <!--pages/act/index/index.wxml-->
-<view class="flex-column filter_nav">
-  <view class="mes-top">
+<!-- <view class="flex-column filter_nav"> -->
+  <!-- <view class="mes-top">
     <view class="tabtitle flex flex-v-center margin-left color-black text-bold">我参与的活动</view>
-  </view>
+  </view> -->
 
   <auth wx:if="{{showModal}}" bind:clickcancle="clickcancle" bind:clickconfirm="clickconfirm"></auth>
   <view class="noarea" wx:if="{{bookArr.length==0}}">
@@ -16,12 +16,10 @@
       </navigator>
     </view>
   </view>
-  <scroll-view scroll-y class="list bg-grey" bindscrolltolower="applyLower" wx:if="{{bookArr.length!==0}}">
-    <view class="flex item" wx:for="{{bookArr}}" bindtap="goDetail" data-item="{{item}}">
-      <view class="item-img">
-        <image src="{{item.posterUrl}}" />
-      </view>
-      <view class="item-content flex-between">
+  <!-- <scroll-view scroll-y class="list bg-grey" bindscrolltolower="applyLower" wx:if="{{bookArr.length!==0}}"> -->
+    <view class="top-zw"></view>
+    <view class="flex-column item" wx:for="{{bookArr}}" bindtap="goDetail" data-item="{{item}}">
+      <!-- <view class="item-content flex-between">
         <view class="font-lg text-black">{{item.name}}</view>
         <view class="text-gray font-sm flex-column">
           <text class="block">2019.12.14 19:30 周六</text>
@@ -32,8 +30,27 @@
           <view class="text-bright font-sm">{{item.money===0?'免费':item.money+'元'}}</view>
         </view>
       </view>
-      <view class="item-tag text-barilla font-xxs">自营</view>
+      <view class="item-tag text-barilla font-xxs">自营</view> -->
+      <view class="flex flex-between">
+        <view class="time">{{item.bmsBook.createTime}}</view>
+        <view wx:if="{{item.bmsBook.status===1}}" class="status">报名成功</view>
+        <view wx:if="{{item.bmsBook.status===0}}" class="status-willpay">待付款</view>
+      </view>
+      <view class="title">
+        {{item.bmsActivity.name}}
+      </view>
+      <view class="flex-column medinfo">
+        <view class="start-time">时间：{{item.bmsActivity.activityStartDt}}</view>
+        <!-- <view class="split"></view> -->
+        <view class="address">地址：{{item.bmsActivity.address}}</view>
+      </view>
+      <view class="price">
+        ￥{{item.bmsActivity.money}}
+      </view>
+      <view class="action">
+        <view class="detail" >详情</view>
+      </view>
     </view>
-  </scroll-view>
+  <!-- </scroll-view> -->
 
-</view>
+<!-- </view> -->

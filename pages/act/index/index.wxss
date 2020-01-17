@@ -102,7 +102,10 @@ swiper {
 .item-addr {
   margin-top: 8rpx;
 }
-
+.top-zw{
+  height: 12rpx;
+  width: 100%;
+}
 .book-tag {
   width: 58rpx;
   height: 38rpx;
@@ -115,10 +118,75 @@ swiper {
 .item {
   margin-bottom: 12rpx;
   background: #fff;
-  padding: 20rpx;
+  width: 692rpx;
+  margin-left: 29rpx;
+  padding-top: 23rpx;
+  padding-bottom: 26rpx;
 }
 
 .top-fixed {
   position: fixed;
   top: 0;
 }
+.time{
+  margin-left: 29rpx;
+  color: #191919;
+  font-size: 28rpx;
+}
+.status{
+  margin-right: 21rpx;
+  color: #44D7B6;
+  font-size: 26rpx;
+  padding: 4rpx 17rpx;
+  background: #EAFCFA;
+}
+.status-willpay{
+  margin-right: 21rpx;
+  color: #fff;
+  font-size: 26rpx;
+  padding: 4rpx 17rpx;
+  background: #F49946;
+}
+.title{
+  color: #101010;
+  font-size: 32rpx;
+  margin-top: 20rpx;
+  font-weight: bold;
+  margin-left: 33rpx;
+}
+.medinfo{
+   margin-top: 20rpx;
+   color: #848484;
+   font-size: 26rpx;
+   margin-left: 33rpx;
+}
+.split{
+  width: 3rpx;
+  height: 20rpx;
+  background: #999999;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  border-radius: 1.5rpx;
+}
+.address{
+  margin-top: 12rpx;
+}
+.price{
+  margin-top: 20rpx;
+  color: #D74341;
+  font-size: 28rpx;
+  margin-left: 33rpx;
+  font-weight: bold;
+}
+.action{
+  display: flex;
+  margin-top: 14rpx;
+  margin-left: 33rpx;
+  flex-direction: row-reverse;
+  margin-right: 37rpx;
+}
+.detail{
+  color: #999999;
+  font-size: 26rpx;
+}
+

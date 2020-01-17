@@ -4,7 +4,8 @@ const {
 } = require('../../../api/user.js');
 const {
   getDetailById,
-  book
+  book,
+  unifiedOrder
 } = require('../../../api/act.js');
 Page({
 
@@ -39,6 +40,38 @@ Page({
       if(res.isPay){
         //调用支付
         console.log("调用支付")
+        unifiedOrder({
+          orderSn: res.orderSn
+        }).then(res=>{
+          let payParam = res;
+          wx.requestPayment({
+            'timeStamp': payParam.timeStamp,
+            'nonceStr': payParam.nonceStr,
+            'package': payParam.packageValue,
+            'signType': payParam.signType,
+            'paySign': payParam.paySign,
+            'success': (res) => {
+              console.log("支付成功")
+              wx.showToast({
+                title: "支付成功",
+                icon: "none"
+              })
+            },
+            'fail': function (res) {
+              console.log("支付失败")
+              wx.showToast({
+                title: "支付失败,订单已生成",
+                icon: "none"
+              })
+            },
+            'complete': function (res) {
+              console.log("支付失败、成功都会打印")
+              wx.switchTab({
+                url: '/pages/act/index/index'
+              })
+            }
+          });
+        })
         wx.showToast({
           title: '报名成功,订单已创建，支付尚未接通',
           icon: 'success',
