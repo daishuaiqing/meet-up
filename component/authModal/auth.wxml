@@ -1,9 +1,9 @@
 <view class="modal">
   <view class="modalcontent">
     <view class="modal-text">
-      <!-- <view class="modalimg">
-      <image class="nocard" mode="aspectFill" src="/images/common/tip.png"></image>
-     </view> -->
+      <view class="modalimg">
+      <image class="nocard" mode="aspectFill" src="/image/common/tip.png"></image>
+     </view>
       <view class="context">
         <view>该操作需要授权登录</view>
         <view>授权登录</view>

@@ -1,5 +1,5 @@
 module.exports = {
-  // baseUrl: "http://127.0.0.1:9100"
+  baseUrl: "https://meetupclub.lihaima.com"
   // baseUrl: "http://10.145.106.17:9100"
-  baseUrl: "https://wxapi.dival.cn"
+  // baseUrl: "https://wxapi.dival.cn"
 }

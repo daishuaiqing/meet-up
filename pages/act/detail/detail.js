@@ -3,7 +3,7 @@ const {
   getDetailById,
   checkBookStatus
 } = require('../../../api/act.js');
-
+const app = getApp();
 Page({
 
   /**
@@ -57,12 +57,42 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-    checkBookStatus({
-      actId: this.data.id
-    }).then(res => {
+    if (app.globalData.token) {
       this.setData({
-        bookStatus: res
+        showModal: false
       })
+      // 查看申请状态
+      checkBookStatus({
+        actId: this.data.id
+      }).then(res => {
+        this.setData({
+          bookStatus: res
+        })
+      })
+    } else {
+      this.setData({
+        bookStatus: false,
+        showAuthModel: true
+      })
+    }
+  },
+
+  // 取消授权
+  cancelAuth(e) {
+    this.setData({
+      showAuthModel: e.detail
+    })
+  },
+  //确定去授权
+  confirmAuth(e) {
+    this.setData({
+      showAuthModel: false
+    })
+    wx.navigateTo({
+      url: '/pages/auth/auth'
+    })
+    this.setData({
+      showAuthModel: false
     })
   },
 

@@ -21,7 +21,8 @@
   font-weight: bold;
 }
 .list{
-  margin-top: 105rpx;
+  /* margin-top: 105rpx; */
+  margin-top: 15rpx;
   padding: 0 16rpx;
 }
 .item-img image{

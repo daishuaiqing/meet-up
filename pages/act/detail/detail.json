@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "modal": "../../../component/showModal/createcard"
+    "modal": "../../../component/showModal/createcard",
+    "auth": "../../../component/authModal/auth"
   },
   "navigationBarTitleText":"活动详情",
   "navigationBarBackgroundColor":"#01c1a7",
